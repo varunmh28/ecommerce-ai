@@ -1,3 +1,4 @@
+import { SanityLive } from "@/sanity/lib/live"
 import { ClerkProvider } from "@clerk/nextjs"
 
 function Layout({children}: {children: React.ReactNode}) {
@@ -5,6 +6,7 @@ function Layout({children}: {children: React.ReactNode}) {
     <ClerkProvider>
 
     <main>{children}</main>
+    <SanityLive />
     </ClerkProvider>
   )
 }
