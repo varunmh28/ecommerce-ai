@@ -1,3 +1,4 @@
+import { FeaturedCarousel } from "@/components/FeaturedCarousel";
 import { sanityFetch } from "@/sanity/lib/live";
 import { ALL_CATEGORIES_QUERY } from "@/sanity/queries/categories";
 import {
@@ -7,6 +8,7 @@ import {
   FILTER_PRODUCTS_BY_PRICE_DESC_QUERY,
   FILTER_PRODUCTS_BY_RELEVANCE_QUERY,
 } from "@/sanity/queries/products";
+import { Suspense } from "react";
 
 interface PageProps {
   searchParams: Promise<{
@@ -85,6 +87,12 @@ export default async function Home({ searchParams }: PageProps) {
    <div>
     {/* Featured Products Carousel */}
     
+      
+      {featuredProducts.length > 0 && (
+        <Suspense fallback={<div>Loading...</div>}>
+          <FeaturedCarousel products={featuredProducts} />
+        </Suspense>
+      )}
 
 
 
