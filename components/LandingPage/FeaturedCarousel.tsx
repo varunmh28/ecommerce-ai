@@ -160,16 +160,16 @@ function FeaturedSlide({ product }: FeaturedSlideProps) {
           {formatPrice(product.price)}
         </p>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex ">
+        <div className="mt-8 flex flex-col gap-3 sm:flex-row ">
+          <Link href={`/products/${product.slug}`}>
           <Button
             
             size="lg"
             className="bg-white text-zinc-900 hover:bg-zinc-100"
           >
-            <Link href={`/products/${product.slug}`}>
-              Shop Now  <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+              Shop Now 
           </Button>
+            </Link>
         </div>
       </div>
     </div>
