@@ -157,7 +157,7 @@ function RevertButtonContent({ size = "icon", ...handle }: RevertButtonProps) {
 
   return (
     <Tooltip>
-      <TooltipTrigger asChild>
+      <TooltipTrigger >
         <Button
           variant="destructive"
           size={size}

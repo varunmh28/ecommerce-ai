@@ -91,7 +91,7 @@ function DeleteButtonContent({
     return (
       <TooltipProvider>
         <Tooltip>
-          <TooltipTrigger asChild>
+          <TooltipTrigger >
             <Button variant="destructive" size="sm" className="gap-1.5" asChild>
               <Link
                 href={`/studio/structure/${handle.documentType};${baseId}`}
