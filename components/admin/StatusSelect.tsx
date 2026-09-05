@@ -36,7 +36,13 @@ function StatusSelectContent(handle: StatusSelectProps) {
   };
 
   return (
-    <Select value={currentStatus} onValueChange={handleStatusChange}>
+    <Select 
+    // value={currentStatus} 
+    // onValueChange={handleStatusChange}
+    value={currentStatus} 
+  onValueChange={(value) => handleStatusChange(value ?? "")}
+    >
+
       <SelectTrigger className="w-[180px]">
         <SelectValue>
           <div className="flex items-center gap-2">

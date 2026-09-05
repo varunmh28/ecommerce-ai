@@ -51,9 +51,12 @@ export default async function OrdersPage() {
         {orders.map((order) => {
           const status = getOrderStatus(order.status);
           const StatusIcon = status.icon;
+          // const images = (order.itemImages ?? []).filter(
+          //   (url): url is string => url !== null,
+          // );
           const images = (order.itemImages ?? []).filter(
-            (url): url is string => url !== null,
-          );
+            (url) => url !== null
+          ) as string[];
 
           return (
             <Link
@@ -67,7 +70,7 @@ export default async function OrdersPage() {
                   images={images}
                   totalCount={order.itemCount ?? 0}
                   size="lg"
-                />
+                /> 
 
                 {/* Right: Order Details */}
                 <div className="flex min-w-0 flex-1 flex-col justify-between">

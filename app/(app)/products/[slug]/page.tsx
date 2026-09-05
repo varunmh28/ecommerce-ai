@@ -30,7 +30,7 @@ console.log("Hi");
           <ProductGallery images={product.images} productName={product.name} />
 
           {/* Product Info */}
-          <ProductInfo product={product} />
+          <ProductInfo product={product as any} />
         </div>
       </div>
     </div>
